@@ -11,30 +11,42 @@ import re
 import sys
 
 
-def load_csv():
+def load_csv(file):
    """Load CSV file of NYS counties and parse into an object"""
 
-   counties = []
-   reader = csv.reader(open("new_york_counties.csv"))
+   rows = []
+   reader = csv.reader(open(file))
 
+   keys = []
+
+   count = 0
    for row in reader:
 
-      if row[0] != 'County Name' and len(row[0]):
-         county = {
-                     'name':         row[0],
-                     'state-county': row[1],
-                     'state-abbr'  : row[2],
-                     'geometry'    : row[4],
-                     'value'       : row[5],
-                     'geo-id'      : row[6],
-                     'geo-id2'     : row[7],
-                     'geo-name'    : row[8],
-                     'number'      : row[10],
-                  }
+      if count == 0:
+         for field in row:
+            keys.append(field.lower().replace(' ', '-'))
 
-         counties.append(county)
+      else:
+         data = {}
 
-   return counties
+         for i in range(0, len(row) - 1):
+            data[keys[i]] = row[i]
+
+         rows.append(data)
+
+      count += 1
+
+   return rows
+
+
+def load_state(file):
+   """Loads state geography from file; couldn't do it via CSV because it errors off due to long record length"""
+
+   f = open(file)
+   data = BeautifulSoup(f.read())
+   f.close()
+
+   return data
 
 
 def parse_geometry(g):
@@ -66,26 +78,12 @@ def main():
    """Main entry point"""
 
 
-   counties = load_csv()
-   for c in counties:
-      print c['name']
-      c['polyline'] = parse_geometry(c['geometry'])
+   counties = load_csv('new_york_counties.csv')   
+   print len(counties)
 
-      line = ''
-      for p in c['polyline']:
-         print p['points']
+   state = load_state('new_york_state.geo')
+   print state.prettify()
 
-         if len(line):
-            line = '|' + line
-
-         line = line + p['points']
-
-      #print line
-
-   f = open('new_york_counties.json', 'w')
-   f.write(json.dumps(counties))
-   f.close()
-   
 
 if __name__ == '__main__':
    sys.exit(main())
