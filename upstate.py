@@ -224,7 +224,7 @@ def main():
    api = twitter.Api(keys.consumer_key, keys.consumer_secret, keys.access_token, keys.access_token_secret)
 
    # Post tweet text and image
-   status = api.PostMedia('This is the real Upstate NY!', IMG_DIR + 'combo.png')
+   status = api.PostMedia('This is the real #UpstateNY!', IMG_DIR + 'combo.png')
 
 
 if __name__ == '__main__':
