@@ -13,6 +13,7 @@ import os
 import random
 import re
 import sys
+import twitter
 import urllib
 
 # Working directory
@@ -218,6 +219,12 @@ def main():
    counties = load_csv(PWD + 'new_york_counties.csv')   
    adjacencies = load_adjacencies()
    build_image(counties, adjacencies)
+
+   # Connect to Twitter
+   api = twitter.Api(keys.consumer_key, keys.consumer_secret, keys.access_token, keys.access_token_secret)
+
+   # Post tweet text and image
+   status = api.PostMedia('This is the real Upstate NY!', IMG_DIR + 'combo.png')
 
 
 if __name__ == '__main__':
