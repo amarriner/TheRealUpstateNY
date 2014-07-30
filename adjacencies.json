@@ -1,0 +1,402 @@
+{
+    "suffolk": [
+        "nassau"
+    ],
+    "nassau": [
+        "suffolk",
+        "queens"
+    ],
+    "queens": [
+        "nassau",
+        "kings",
+        "new-york",
+        "bronx"
+    ],
+    "kings": [
+        "queens",
+        "new-york",
+        "richmond"
+    ],
+    "richmond": [
+        "kings"
+    ],
+    "new-york": [
+        "kings",
+        "queens",
+        "bronx"
+    ],
+    "bronx": [
+        "new-york",
+        "queens",
+        "westchester"
+    ],
+    "westchester": [
+        "bronx",
+        "rockland",
+        "putnam"
+    ],
+    "rockland": [
+        "westchester",
+        "orange"
+    ],
+    "putnam": [
+        "westchester",
+        "orange",
+        "dutchess"
+    ],
+    "orange": [
+        "rockland",
+        "putnam",
+        "dutchess",
+        "ulster",
+        "sullivan"
+    ],
+    "dutchess": [
+        "putnam",
+        "orange",
+        "ulster",
+        "columbia"
+    ],
+    "ulster": [
+        "sullivan",
+        "orange",
+        "dutchess",
+        "columbia",
+        "greene",
+        "delaware"
+    ],
+    "sullivan": [
+        "orange",
+        "ulster",
+        "delaware"
+    ],
+    "columbia": [
+        "dutchess",
+        "ulster",
+        "greene",
+        "rensselaer"
+    ],
+    "greene": [
+        "columbia",
+        "rensselaer",
+        "albany",
+        "schoharie",
+        "delaware",
+        "ulster"
+    ],
+    "delaware": [
+        "sullivan",
+        "ulster",
+        "greene",
+        "schoharie",
+        "otsego",
+        "chenango",
+        "broome"
+    ],
+    "rensselaer": [
+        "columbia",
+        "greene",
+        "albany",
+        "saratoga",
+        "washington"
+    ],
+    "albany": [
+        "rensselaer",
+        "saratoga",
+        "schenectady",
+        "schoharie",
+        "greene"
+    ],
+    "schoharie": [
+        "albany",
+        "schenectady",
+        "montgomery",
+        "otsego",
+        "delaware",
+        "greene"
+    ],
+    "otsego": [
+        "schoharie",
+        "montgomery",
+        "herkimer",
+        "oneida",
+        "madison",
+        "chenango",
+        "delaware"
+    ],
+    "washington": [
+        "rensselaer",
+        "essex",
+        "warren",
+        "saratoga"
+    ],
+    "saratoga": [
+        "washington",
+        "warren",
+        "hamilton",
+        "fulton",
+        "montgomery",
+        "schenectady"
+    ],
+    "schenectady": [
+        "saratoga",
+        "montgomery",
+        "schoharie",
+        "albany"
+    ],
+    "montgomery": [
+        "schenectady",
+        "saratoga",
+        "fulton",
+        "herkimer",
+        "otsego",
+        "schoharie"
+    ],
+    "herkimer": [
+        "montgomery",
+        "fulton",
+        "hamilton",
+        "st-lawrence",
+        "lewis",
+        "oneida",
+        "otsego"
+    ],
+    "fulton": [
+        "saratoga",
+        "hamilton",
+        "herkimer",
+        "montgomery"
+    ],
+    "warren": [
+        "washington",
+        "essex",
+        "hamilton",
+        "saratoga"
+    ],
+    "hamilton": [
+        "warren",
+        "essex",
+        "franklin",
+        "st-lawrence",
+        "herkimer",
+        "fulton",
+        "saratoga"
+    ],
+    "essex": [
+        "clinton",
+        "franklin",
+        "hamilton",
+        "warren"
+    ],
+    "clinton": [
+        "essex",
+        "franklin"
+    ],
+    "franklin": [
+        "clinton",
+        "st-lawrence",
+        "hamilton",
+        "essex"
+    ],
+    "st-lawrence": [
+        "franklin",
+        "hamilton",
+        "jefferson",
+        "lewis",
+        "herkimer"
+    ],
+    "jefferson": [
+        "st-lawrence",
+        "lewis",
+        "oswego"
+    ],
+    "lewis": [
+        "st-lawrence",
+        "jefferson",
+        "oswego",
+        "oneida",
+        "herkimer"
+    ],
+    "oneida": [
+        "herkimer",
+        "lewis",
+        "oswego",
+        "madison",
+        "otsego"
+    ],
+    "oswego": [
+        "jefferson",
+        "lewis",
+        "oneida",
+        "madison",
+        "onondaga",
+        "cayuga"
+    ],
+    "madison": [
+        "otsego",
+        "oneida",
+        "oswego",
+        "onondaga",
+        "cortland",
+        "chenango"
+    ],
+    "chenango": [
+        "otsego",
+        "madison",
+        "cortland",
+        "broome"
+    ],
+    "broome": [
+        "chenango",
+        "cortland",
+        "tioga"
+    ],
+    "onondaga": [
+        "madison",
+        "oswego",
+        "cayuga",
+        "cortland"
+    ],
+    "cortland": [
+        "chenango",
+        "madison",
+        "onondaga",
+        "cayuga",
+        "tompkins",
+        "tioga"
+    ],
+    "tioga": [
+        "broome",
+        "cortland",
+        "tompkins",
+        "chemung"
+    ],
+    "cayuga": [
+        "onondaga",
+        "oswego",
+        "wayne",
+        "seneca",
+        "tompkins",
+        "cortland"
+    ],
+    "tompkins": [
+        "cortland",
+        "cayuga",
+        "seneca",
+        "schuyler",
+        "chemung",
+        "tioga"
+    ],
+    "chemung": [
+        "tioga",
+        "tompkins",
+        "schuyler",
+        "steuben"
+    ],
+    "wayne": [
+        "cayuga",
+        "monroe",
+        "ontario",
+        "seneca"
+    ],
+    "seneca": [
+        "cayuga",
+        "wayne",
+        "ontario",
+        "yates",
+        "schuyler",
+        "tompkins"
+    ],
+    "schuyler": [
+        "tompkins",
+        "seneca",
+        "yates",
+        "steuben",
+        "chemung"
+    ],
+    "ontario": [
+        "seneca",
+        "wayne",
+        "monroe",
+        "livingston",
+        "steuben",
+        "yates"
+    ],
+    "yates": [
+        "seneca",
+        "ontario",
+        "steuben",
+        "schuyler"
+    ],
+    "steuben": [
+        "chemung",
+        "schuyler",
+        "yates",
+        "ontario",
+        "livingston",
+        "allegany"
+    ],
+    "monroe": [
+        "wayne",
+        "orleans",
+        "genesee",
+        "livingston",
+        "ontario"
+    ],
+    "livingston": [
+        "ontario",
+        "monroe",
+        "genesee",
+        "wyoming",
+        "allegany",
+        "steuben"
+    ],
+    "allegany": [
+        "steuben",
+        "livingston",
+        "wyoming",
+        "cattaraugus"
+    ],
+    "orleans": [
+        "monroe",
+        "niagara",
+        "genesee"
+    ],
+    "genesee": [
+        "livingston",
+        "monroe",
+        "orleans",
+        "niagara",
+        "erie",
+        "wyoming"
+    ],
+    "wyoming": [
+        "livingston",
+        "genesee",
+        "erie",
+        "cattaraugus",
+        "allegany"
+    ],
+    "niagara": [
+        "orleans",
+        "genesee",
+        "erie"
+    ],
+    "erie": [
+        "genesee",
+        "niagara",
+        "wyoming",
+        "cattaraugus",
+        "chautaugua"
+    ],
+    "cattaraugus": [
+        "allegany",
+        "wyoming",
+        "erie",
+        "chautauqua"
+    ],
+    "chautauqua": [
+        "cattaraugus",
+        "erie"
+    ]
+}
