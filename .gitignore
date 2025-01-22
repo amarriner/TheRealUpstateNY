@@ -1,4 +1,6 @@
+.venv
 *.pyc
 __pycache__
 images
-keys.py*
+.config.json
+*.log
