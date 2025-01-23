@@ -12,6 +12,11 @@ import sys
 import time
 
 from atproto import Client as BlueskyClient
+from atproto_client.models.app.bsky.richtext.facet import (
+    Main as BlueskyFacet,
+    ByteSlice as BlueSkyByteSlice,
+    Tag as BlueskyHashtag
+)
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
 
@@ -241,7 +246,24 @@ def main():
 
     client = BlueskyClient()
     client.login(config['bluesky']['username'], config['bluesky']['password'])
-    client.send_image('This is the real #UpstateNY!', byte_arr, image_alt='This is the real #UpstateNY')
+    client.send_image(
+        'This is #UpstateNY!',
+        byte_arr,
+        image_alt='This is #UpstateNY!',
+        facets=[
+            BlueskyFacet(
+                features=[
+                    BlueskyHashtag(
+                        tag="UpstateNY"
+                    )
+                ],
+                index=BlueSkyByteSlice(
+                    byte_start=8,
+                    byte_end=18
+                )
+            )
+        ]
+    )
 
 
 if __name__ == '__main__':
